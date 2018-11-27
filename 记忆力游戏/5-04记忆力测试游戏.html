@@ -1,8 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
-<title>¼ÇÒäÁ¦²âÊÔÓÎÏ·</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>è®°å¿†åŠ›æµ‹è¯•æ¸¸æˆ</title>
 <style>
    li{
        padding:40px 10px;
@@ -22,14 +22,14 @@ function checkPiece()
 { 
    var evt=evt||window.event;
    var target=evt.target||evt.srcElement;
-   //var evt = evt ? evt : window.event;//window.event´ú±í×ÅÔÚIEÏÂÊÂ¼ş¶ÔÏóµÄ×´Ì¬¡£Ö»ÓĞÔÚÊÂ¼ş·¢ÉúÊ±ÉúĞ§¡£ÈçÊó±ê¡¢¼üÅÌµÈÊÂ¼ş±»´¥·¢Ê±Õâ¸ö¶ÔÏó²Å´æÔÚ¡£window.eventÕâÖ»ÔÚIEÏÂÊÇÕâÑùµÄ¡£µ«Ëü²¢²»ÊÇ±ê×¼¡£¡£Ò²¾ÍÊÇËµÆäËûä¯ÀÀÆ÷²¢²»Ö§³Ö¡£ÔÚW3C±ê×¼Ö§³ÖµÄä¯ÀÀÆ÷ÏÂ£¬ÊÂ¼ş¶ÔÏóÒı·¢ÊÂ¼şº¯ÊıµÄµÚÒ»¸ö²ÎÊı£¬²ÎÊıÃûËæÒâ,Ò»°ãÃüÃûÊÇevt,Ò²¿ÉÒÔ¶¨ÒåÎªÆäËûÃû×Ö
+   //var evt = evt ? evt : window.event;//window.eventä»£è¡¨ç€åœ¨IEä¸‹äº‹ä»¶å¯¹è±¡çš„çŠ¶æ€ã€‚åªæœ‰åœ¨äº‹ä»¶å‘ç”Ÿæ—¶ç”Ÿæ•ˆã€‚å¦‚é¼ æ ‡ã€é”®ç›˜ç­‰äº‹ä»¶è¢«è§¦å‘æ—¶è¿™ä¸ªå¯¹è±¡æ‰å­˜åœ¨ã€‚window.eventè¿™åªåœ¨IEä¸‹æ˜¯è¿™æ ·çš„ã€‚ä½†å®ƒå¹¶ä¸æ˜¯æ ‡å‡†ã€‚ã€‚ä¹Ÿå°±æ˜¯è¯´å…¶ä»–æµè§ˆå™¨å¹¶ä¸æ”¯æŒã€‚åœ¨W3Cæ ‡å‡†æ”¯æŒçš„æµè§ˆå™¨ä¸‹ï¼Œäº‹ä»¶å¯¹è±¡å¼•å‘äº‹ä»¶å‡½æ•°çš„ç¬¬ä¸€ä¸ªå‚æ•°ï¼Œå‚æ•°åéšæ„,ä¸€èˆ¬å‘½åæ˜¯evt,ä¹Ÿå¯ä»¥å®šä¹‰ä¸ºå…¶ä»–åå­—
    //var target = evt ? evt.target : window.event.srcElement; 
    //alert(target.clicked);
 if(target.clicked==1)
 {  return false;alert(target.clicked);}
 else
 {  
-   target.style.color="black";  //Ò²¿ÉÒÔĞ´³Étarget.style="color:black";  µ«IE²»Ö§³Ö£¬360ºÍQQä¯ÀÀÆ÷¶¼Ö§³Ö
+   target.style.color="black";  //ä¹Ÿå¯ä»¥å†™æˆtarget.style="color:black";  ä½†IEä¸æ”¯æŒï¼Œ360å’ŒQQæµè§ˆå™¨éƒ½æ”¯æŒ
    if(nowNo=="0")
    {   nowNo=target.innerHTML; 
        oldobj=target;
@@ -40,11 +40,11 @@ else
        if(nowNo==target.innerHTML)
 	   {  nowNo="0";
 	      target.clicked=1; 
-		     //ÉÏÃæ±íÊ¾ÕıÈ·ÕÒµ½Ò»¶Ô£¬ÏÂÃæ¿ªÊ¼ÀûÓÃÑ­»·ÅĞ¶ÏÊÇ·ñÈ«²¿ÕÒÍê
+		     //ä¸Šé¢è¡¨ç¤ºæ­£ç¡®æ‰¾åˆ°ä¸€å¯¹ï¼Œä¸‹é¢å¼€å§‹åˆ©ç”¨å¾ªç¯åˆ¤æ–­æ˜¯å¦å…¨éƒ¨æ‰¾å®Œ
 		     var li=document.getElementsByTagName("li");
 			 for(var j=0,i=0;i<li.length;i++)
-			 {  if(li[i].clicked!=1) {j=1;break;} }//Èç¹ûÕÒµ½Ä³¸öÃ»±»¸æ±ê¼ÇÎª1£¬ÔòÉèj=1
-			 if(j==0){ alert("ÄãÓ®ÁË£¡£¡£¡"); }
+			 {  if(li[i].clicked!=1) {j=1;break;} }//å¦‚æœæ‰¾åˆ°æŸä¸ªæ²¡è¢«å‘Šæ ‡è®°ä¸º1ï¼Œåˆ™è®¾j=1
+			 if(j==0){ alert("ä½ èµ¢äº†ï¼ï¼ï¼"); }
 	   }
 	   else
 	   {  nowNo="0"; 
@@ -64,17 +64,17 @@ window.onload=function()
 </head>
 
 <body id="pieces">
-<h2>ÓÎÏ·¹æ»®£º<br>¡¡¡¡ÓÃÊó±êµã»÷·½¸ñ£¬Èç¹ûÁ¬ĞøÁ½´Îµã»÷µÄÊı×ÖÏàÍ¬£¬Ôò±íÊ¾³É¹¦ÕÒ³öÒ»¶Ô£¬¶øÈç¹ûÁ¬ĞøÁ½´Îµã»÷µÄÊı×Ö²»Í¬£¬ÔòÕâÁ½¸öÊı×Ö¶¼»áÒş²Ø£¬µ±³É¹¦ÕÒ³öËùÓĞ¶Ô¶ÔÊ±£¬Äã¾ÍÓ®µÃÁË±ÈÈü¡£</h2>
+<h2>æ¸¸æˆè§„åˆ’ï¼š<br>ã€€ã€€ç”¨é¼ æ ‡ç‚¹å‡»æ–¹æ ¼ï¼Œå¦‚æœè¿ç»­ä¸¤æ¬¡ç‚¹å‡»çš„æ•°å­—ç›¸åŒï¼Œåˆ™è¡¨ç¤ºæˆåŠŸæ‰¾å‡ºä¸€å¯¹ï¼Œè€Œå¦‚æœè¿ç»­ä¸¤æ¬¡ç‚¹å‡»çš„æ•°å­—ä¸åŒï¼Œåˆ™è¿™ä¸¤ä¸ªæ•°å­—éƒ½ä¼šéšè—ï¼Œå½“æˆåŠŸæ‰¾å‡ºæ‰€æœ‰å¯¹å¯¹æ—¶ï¼Œä½ å°±èµ¢å¾—äº†æ¯”èµ›ã€‚</h2>
 <script>
-   var a=new Array(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);//±£´æ20¸öËæ»úÊı
-   var b=new Array(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);//¼ÇÂ¼Ã¿¸öËæ»úÊıµÄ¸öÊı£¬±£Ö¤Ã¿¸öËæ»úÊı¸öÊıÓĞÇÒÖ»ÓĞ2¸ö
+   var a=new Array(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);//ä¿å­˜20ä¸ªéšæœºæ•°
+   var b=new Array(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0);//è®°å½•æ¯ä¸ªéšæœºæ•°çš„ä¸ªæ•°ï¼Œä¿è¯æ¯ä¸ªéšæœºæ•°ä¸ªæ•°æœ‰ä¸”åªæœ‰2ä¸ª
    for(var i=1;i<=20;i++)
    {  
       rand=parseInt(Math.random()*10,10)+1;
 	  for(var j=1;j<=20;j++)
       {   if(a[j]==rand)
 	      { 
-		      if(b[j]<2) { a[i]=rand;b[j]+=1;break; }//Èç¹ûb[j]<2£¬ËµÃ÷rand»¹²»¹»2¸ö£¬Ôò¼ÇÂ¼¡¢b+1
+		      if(b[j]<2) { a[i]=rand;b[j]+=1;break; }//å¦‚æœb[j]<2ï¼Œè¯´æ˜randè¿˜ä¸å¤Ÿ2ä¸ªï¼Œåˆ™è®°å½•ã€b+1
 			  else { i=i-1; break;}
 		  }
 	  }
