@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input id="oB" type="button" value="新闻按钮">
+    <ul id="list"></ul>
+
+    <script>
+        window.onload = function(){
+            var oUl = document.getElementById('list');
+            var oB = document.getElementById('oB');
+            var arr = [
+            '伊拉克大规模骚乱',
+            '外交部回应美指责',
+            '蔡宗泽接受调查',
+            '追星3年花费30万',
+            'C罗抵达都灵',
+            '玩手机胸口被烧焦']
+            var oFF = true;//最佳方法(一)
+            
+
+            oB.onclick = function(){
+                //oB.style.display = 'none';//将按钮直接去掉，让用户无法点击(二)
+                // oUl.innerHTML = '';//先清空(三)性能问题不好
+                if(oFF){
+                for(var i=0;i<arr.length;i++){
+                    oUl.innerHTML +='<li>'+arr[i]+'</li>' ;
+                    oFF = false;
+                }
+              }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>遍历li</title>
+
+</head>
+<body>
+    <ul id="list">
+        <li><h2>我是第一个li</h2></li>
+        <ul>
+            <li>我是第一个小的li</li>
+            <li>我是第一个小的li</li>
+        </ul>
+        <li><h2>我是第二个li</h2></li>
+        <ul>
+            <li>我是第二个小的li</li>
+            <li>我是第二个小的li</li>
+        </ul>
+        <li><h2>我是第三个li</h2></li>
+        <ul>
+            <li>我是第三个小的li</li>
+            <li>我是第三个小的li</li>
+        </ul>
+    </ul>
+    <script>
+        var oUl = document.getElementById('list');//获取id为list的ul
+        var aUl = oUl.getElementsByTagName('ul');//获取id为list的ul中的ul
+        var len = aUl.length;//将aUl中的长度赋值给len
+        var aLi = null;
+
+        for(var i=0;i<len;i++){
+            aLi = aUl[i].getElementsByTagName('li');//找到ul中的li，并且赋值给aLi
+            for(var j=0;j<aLi.length;j++){
+                aLi[j].style.border = '1px solid red';
+            }
+        }
+    </script>
+</body>
+</html>
